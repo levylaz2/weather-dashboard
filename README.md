@@ -1,2 +1,4 @@
 # weather-dashboard
-This is a fully functional Weather Dashboard web application using the OpenWeatherMap API. The application will allow users to search for any city in the world and view current weather condition,a 5-day weather forecast and save favorite cities for  easy access
+A fully functional Weather Dashboard web application built with HTML, CSS, and JavaScript, powered by the OpenWeatherMap API.
+
+This application allows users to search for any city worldwide and view real-time weather conditions, a 5-day forecast, and save favorite cities for quick access. The project demonstrates API integration, asynchronous JavaScript, dynamic DOM manipulation, and local storage usage.
