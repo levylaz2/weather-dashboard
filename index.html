@@ -22,7 +22,7 @@
     <div class="page-wrapper">
         <main class="main-section">
             <form class="search-btn">
-                <input type="text" id="city-input" placeholder="Search city.." name="search">
+                <input type="text" id="city-input" placeholder="Search city.." name="search"   autocomplete="off">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
 
@@ -33,7 +33,7 @@
                     <h3 id="city-name">--</h3>
                     <img id="weather-icon" src="" alt="Icon" style="display:none;" />
                     <div id="temperature">--°C</div>
-                    <button id="toggle-btn" onclick="toggleTemperature()">Switch to Fahrenheit</button>
+                    <button id="toggle-btn">Switch to Fahrenheit</button>
                     <div id="description">Loading weather...</div>
                 </div>
             </section>
