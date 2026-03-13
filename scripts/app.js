@@ -31,19 +31,6 @@ async function fetchCurrentWeather(query) {
     displayCurrentWeather(data);
 }
 
-// async function fetchCurrentWeather(query) {
-//     try {
-//         const url = `${BASE_URL}/current.json?key=${API_KEY}&q=${query}`;
-//         const res = await fetch(url);
-//         if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
-//         const data = await res.json();
-//         displayCurrentWeather(data);
-//         fetchForecastWeather(data.location.name);
-//     } catch (error) {
-//         console.error('Failed to fetch weather:', error.message);
-//     }
-// }
-
 async function fetchForecastWeather(city) {
     try {
         const url = `${BASE_URL}/forecast.json?key=${API_KEY}&q=${city}&days=5`;
@@ -80,7 +67,6 @@ function displayCurrentWeather(data) {
     toggleBtn.textContent = 'Switch to Fahrenheit';
 
 }
-
 
 function displayForecastCard(data) {
     forecastContainer.innerHTML = '';
