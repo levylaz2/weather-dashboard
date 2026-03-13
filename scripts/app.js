@@ -1,9 +1,10 @@
-const API_KEY = '26ee0c604e454706b23113013262602';
+const API_KEY = import.meta.env.VITE_API_KEY;
+console.log('API KEY:', API_KEY);
 const BASE_URL = 'https://api.weatherapi.com/v1';
 
 const darkModeBtn = document.getElementById("darkmode-tog-btn");
 const cityInput = document.getElementById("city-input");
-const currentWeather = document.getElementById(id = "current-weather");
+const currentWeather = document.getElementById("current-weather");
 const cityName = document.getElementById("city-name");
 const weatherIcon = document.getElementById("weather-icon");
 const temperature = document.getElementById("temperature");
@@ -30,6 +31,18 @@ async function fetchCurrentWeather(query) {
     displayCurrentWeather(data);
 }
 
+// async function fetchCurrentWeather(query) {
+//     try {
+//         const url = `${BASE_URL}/current.json?key=${API_KEY}&q=${query}`;
+//         const res = await fetch(url);
+//         if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
+//         const data = await res.json();
+//         displayCurrentWeather(data);
+//         fetchForecastWeather(data.location.name);
+//     } catch (error) {
+//         console.error('Failed to fetch weather:', error.message);
+//     }
+// }
 
 async function fetchForecastWeather(city) {
     try {
@@ -200,7 +213,7 @@ function loadDarkModePreference() {
 window.addEventListener('DOMContentLoaded', async () => {
     console.log("windowscontentloaded");
     loadDarkModePreference();
-    await fetchCurrentWeather(6.5244, 3.3792);
+    await fetchCurrentWeather('6.5244,3.3792');
     displayFavoriteCities();
 });
 
